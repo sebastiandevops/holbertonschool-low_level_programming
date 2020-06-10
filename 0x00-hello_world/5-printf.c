@@ -4,7 +4,7 @@
  *
  * Return: 0
  */
-int main(void)
+int main()
 {
 printf("with proper grammar, but the outcome is a piece of art,"); /*string*/
 return (0);
