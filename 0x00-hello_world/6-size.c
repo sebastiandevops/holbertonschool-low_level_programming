@@ -4,13 +4,12 @@
  *
  * Return: 0
  */
-int main(void)
-{
-printf("Size of a char: 1 byte(s)");
-printf("Size of an int: 4 byte(s)");
-printf("Size of a long int: 8 byte(s)");
-printf("Size of a long long int: 8 byte(s)");
-printf("Size of a float: 4 byte(s)");
-
-return (0);
-}
+int main() 
+{ 
+printf("Size of char: %lu\n", sizeof(char)); 
+printf("Size of an in: %lu\n", sizeof(int));
+printf("Size of a long int: %li\n", sizeof(long int)); 
+printf("Size of a long long int: %lli\n", sizeof(long long int));
+printf("Size of float: %lu\n", sizeof(float));  
+return 0; 
+} 
