@@ -13,8 +13,10 @@ int main(void)
 		putchar((i / 10) + '0');
 		putchar((i % 10) + '0');
 		if (i != 99)
+		{
 			putchar(',');
-		putchar(' ');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
