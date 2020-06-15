@@ -1,0 +1,1 @@
+This folder contains all 11 task assigned in the proyect 0x02. C - Functions, nested loops.
