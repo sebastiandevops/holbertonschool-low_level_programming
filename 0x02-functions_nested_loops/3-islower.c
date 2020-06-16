@@ -1,6 +1,6 @@
 /**
  * _islower - return 1 if is lowercase, else 0
- *
+ * @c: The character to check
  *
  * Return: On success 1.
  * Else, 0 is returned.
