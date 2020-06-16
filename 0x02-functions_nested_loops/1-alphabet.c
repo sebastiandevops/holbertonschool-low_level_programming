@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
- * @c: The character to iterate
+ * print_alphabet - prints the alphabet.
+ *
  *
  * Return: void.
  *
@@ -9,6 +9,7 @@
 void print_alphabet(void)
 {
 	char c;
+
 	for (c = 'a'; c <= 'z'; ++c)
 		_putchar(c);
 	_putchar('\n');
