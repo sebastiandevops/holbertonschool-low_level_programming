@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- * int print_sign - return 1 if is positive, else 0 or -1
- * @n: The character to check
+ * print_sign - return 1 if is positive, else 0 or -1
+ * @n: The number to check
  *
- * Return: 1, -1 or 0.
- *
+ * Return: 1 if is positive or -1 if is negative.
+ * Else: return 0.
  */
 int print_sign(int n)
 {
