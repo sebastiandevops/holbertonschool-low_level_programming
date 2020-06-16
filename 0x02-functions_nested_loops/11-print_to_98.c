@@ -1,7 +1,7 @@
 /**
  * print_to_98 - return the sum of two integers
  * @n: number to start.
- * @b: Integer to sum.
+ *
  * Return: Result.
  *
  */
