@@ -19,7 +19,10 @@ void print_square(int size)
 			/* Print star for each column */
 			_putchar('#');
 		}
-
+		if (size < 0)
+		{
+			_putchar('\n');
+		}
 		/* Move to the next line/row */
 		_putchar('\n');
 	}
