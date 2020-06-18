@@ -1,4 +1,4 @@
-int _putchar(char c);
+#include "holberton.h"
 /**
  * print_most_numbers - print numbers trom 0 to 9 except 2, 4.
  *
@@ -8,7 +8,7 @@ int _putchar(char c);
  */
 void print_most_numbers(void)
 {
-	int n = 1;
+	int n = 0;
 
 	while (n <= 9)
 	{
