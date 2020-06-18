@@ -1,4 +1,4 @@
-int _putchar(char c);
+#include "holberton.h"
 /**
  * more_numbers - print numbers trom 0 to 14 10 times.
  *
