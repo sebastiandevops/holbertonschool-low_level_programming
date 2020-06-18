@@ -1,3 +1,4 @@
+int _putchar(char c);
 /**
  * print_numbers - print numbers from 0 to 9
  *
