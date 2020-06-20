@@ -8,24 +8,40 @@
  */
 void print_number(int n)
 {
-	int cont = 1;
+	int cont;
 	int aux;
 
 	if (n < 0)
 	{
-		n = -n;
 		_putchar('-');
+		aux = n;
+		cont = -1;
+		while (aux < -9)
+		{
+			aux = (aux / 10);
+			cont = (cont * 10);
+		}
+		while (cont <= -1)
+		{
+			_putchar((n / cont) + '0');
+			n = (n % cont);
+			cont = (cont / 10);
+		}
 	}
-	aux = n;
-	while (aux > 9)
+	else
 	{
-		aux = (aux / 10);
-		cont = (cont * 10);
-	}
-	while (cont >= 1)
-	{
-		_putchar((n / cont) + '0');
-		n = (n % cont);
-		cont = (cont / 10);
+		aux = n;
+		cont = 1;
+		while (aux > 9)
+		{
+			aux = (aux / 10);
+			cont = (cont * 10);
+		}
+		while (cont >= 1)
+		{
+			_putchar((n / cont) + '0');
+			n = (n % cont);
+			cont = (cont / 10);
+		}
 	}
 }
