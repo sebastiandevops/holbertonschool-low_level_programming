@@ -1,0 +1,1 @@
+This folder contains all 10 task assigned in the 0x05-pointers-arrays-strings project.
