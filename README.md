@@ -1,1 +1,0 @@
-This repository is abuot the the fundamentals of C.
