@@ -8,19 +8,26 @@
  */
 void rev_string(char *s)
 {
-	int _strlen(char *s);
-	int len;
+	int length, c;
+	char *begin, *end, temp;
 
-	len = _strlen(s) - 1;
+	length = _strlen(s);
+	begin = s;
+	end = s;
 
-	while (len >= 0)
+	for (c = 0; c < length - 1; c++)
+		end++;
+
+	for (c = 0; c < length / 2; c++)
 	{
-		_putchar(s[len]);
-		len--;
-	}
-	_putchar('\n');
-}
+		temp = *end;
+		*end = *begin;
+		*begin = temp;
 
+		begin++;
+		end--;
+	}
+}
 /**
  * _strlen - function that returns the length of a string.
  * @s: string to check.
