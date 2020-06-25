@@ -12,19 +12,18 @@ int _strcmp(char *s1, char *s2)
 
 	for (i = 0; s1[i] && s2[i]; ++i)
 	{
-		/* If characters are same or inverting the*/
-		/* 6th bit makes them same */
-		if (s1[i] == s2[i] || (s1[i] ^ 32) == s2[i])
-			continue;
+		if (s1[i] > s2[i])
+		{
+			return (15);
+		}
+		else if (s1[i] == s2[i])
+		{
+			return (0);
+		}
 		else
-			break;
+		{
+			return (-15);
+		}
 	}
-	/* Compare the last (or first mismatching in*/
-	/* case of not same) characters */
-	if (s1[i] == s2[i])
-		return (0);
-	/* Set the 6th bit in both, then compare*/
-	if (s1[i] < s2[i])
-		return (-15);
 	return (15);
 }
