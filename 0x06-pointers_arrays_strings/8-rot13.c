@@ -7,27 +7,18 @@
  */
 char *rot13(char *s)
 {
-	int i;
-	int j;
-	char letras[52] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-			   'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-			   'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g',
-			   'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-			   's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-	char numeros[52] = {'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-			    'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-			    'J', 'K', 'L', 'M', 'n', 'o', 'p', 'q', 'r', 's', 't',
-			    'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e',
-			    'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'};
+	int i1;
+	int i2;
+	char abc[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; s[i] != '\n'; i++)
+	for (i1 = 0; s[i1]; i1++)
 	{
-		for (j = 0; j <= 51 ; j++)
+		for(i2 = 0; abc[i2] ; i2++)
 		{
-
-			if (s[i] == letras[j])
+			if (s[i1] == abc[i2])
 			{
-				s[i] = numeros[j];
+				s[i1] = rot13[i2];
 			}
 		}
 	}
