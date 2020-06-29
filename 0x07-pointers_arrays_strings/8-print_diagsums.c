@@ -9,7 +9,6 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j, sum1 = 0, sum2 = 0;
-	const int (*ar)[size] = a;
 
 	for (i = 0; i < size; i++)
 	{
@@ -17,15 +16,14 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				sum1 = sum1 + (ar[i][j]);
+				sum1 = sum1 + *(a + (size*i +j));
 			}
 			if ((i + j) == (size - 1))
 			{
-				sum2 = sum2 + (ar[i][j]);
+				sum2 = sum2 + *(a + (size*i +j));
 			}
 		}
 	}
 	printf("%d, ", sum1);
-	printf("%d", sum2);
-	_putchar('\n');
+	printf("%d\n", sum2);
 }
