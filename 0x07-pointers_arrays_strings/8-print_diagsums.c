@@ -16,11 +16,11 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				sum1 = sum1 + *(a + (size*i +j));
+				sum1 = sum1 + *(a + (size * i + j));
 			}
 			if ((i + j) == (size - 1))
 			{
-				sum2 = sum2 + *(a + (size*i +j));
+				sum2 = sum2 + *(a + (size * i + j));
 			}
 		}
 	}
