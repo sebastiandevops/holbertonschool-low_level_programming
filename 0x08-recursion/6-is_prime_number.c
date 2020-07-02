@@ -27,7 +27,7 @@ int is_prime_number(int n)
  */
 int foo_recursion(int n, int i)
 {
-	if (n == 1)
+	if (n == 1 || n == 0)
 	{
 		return (0);
 	}
