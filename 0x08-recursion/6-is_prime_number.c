@@ -9,7 +9,7 @@
 
 int is_prime_number(int n)
 {
-	int i = 2;
+	int i;
 
 	if (n > 0)
 	{
@@ -31,7 +31,7 @@ int is_prime_number(int n)
  */
 int foo_recursion(int n, int i)
 {
-	if (n == 1)
+	if (n == 1 || n == 0 || n == -1)
 	{
 		return (0);
 	}
@@ -49,8 +49,10 @@ int foo_recursion(int n, int i)
 			}
 		}
 		else
+		{
 			i = i + 1;
-		return (foo_recursion(n, i));
+			return (foo_recursion(n, i));
+		}
 	}
 	else
 	{
@@ -66,9 +68,7 @@ int foo_recursion(int n, int i)
 			}
 		}
 		else
-		{
 			i = i - 1;
 			return (foo_recursion(n, i));
-		}
 	}
 }
