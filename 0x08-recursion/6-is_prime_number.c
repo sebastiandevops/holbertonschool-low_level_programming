@@ -9,7 +9,7 @@
 
 int is_prime_number(int n)
 {
-	int i = 2;
+	long i = 2;
 
 	if (n < 0)
 	{
@@ -25,7 +25,7 @@ int is_prime_number(int n)
  * Return: 1 if it is prime else 0..
  *
  */
-int foo_recursion(int n, int i)
+int foo_recursion(int n, long i)
 {
 	if (n == 1 || n == 0)
 	{
