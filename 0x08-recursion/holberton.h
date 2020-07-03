@@ -15,6 +15,6 @@ int _sqrt_recursion(int n);
 int _sqrt_recursive(int n, int i);
 int is_palindrome(char *s);
 int is_palindrome_recursive(char *begin, char *end);
-int _strlen(char *s);
+int _strlen_recursion(char *s);
 
 #endif /* HOLBERTON_H */
