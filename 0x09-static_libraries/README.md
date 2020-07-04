@@ -1,0 +1,1 @@
+This folder includes all task assigned in the 0x09-static_libraries project.
