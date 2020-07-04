@@ -1,0 +1,1 @@
+This folder includes all task assigned in the 0x0A-argc_argv project.
