@@ -9,11 +9,11 @@ int isalpha(int argument);
  */
 int main(int argc, char *argv[])
 {
-	int i = 0, sum = 0;
+	int i, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if(atoi(argv[i]))
+		if (atoi(argv[i]))
 		{
 			sum += atoi(argv[i]);
 		}
