@@ -11,17 +11,18 @@ int main(int argc, char *argv[])
 {
 	int i = 0, sum = 0;
 
-	if (atoi(argv[i]) >= 0 && atoi(argv[i]) <= 9)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if(atoi(argv[i]))
 		{
 			sum += atoi(argv[i]);
 		}
-		printf("%d\n", sum);
+		else
+		{
+			printf("Error\n");
+			exit(1);
+		}
 	}
-	else
-	{
-		printf("Error");
-	}
+	printf("%d\n", sum);
 	return (0);
 }
