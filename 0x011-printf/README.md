@@ -1,1 +1,0 @@
-This repository contains all projects develop on C programming.
