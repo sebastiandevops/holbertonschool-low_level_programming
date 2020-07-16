@@ -5,8 +5,10 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	get_op_func(char *s)(int, int);
+	int i, result;
 
+	result = (get_op_func(s)(argv[i], argv[i]));
+	result (result);
 }
