@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 
 	/* access all the arguments assigned to valist */
-	for(i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		c = va_arg(valist, char*);
 		if (separator == NULL)
