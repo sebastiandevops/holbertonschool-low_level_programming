@@ -3,49 +3,33 @@
 /**
  * print_all - function that prints anything.
  * @format: list of types.
- * Return: sum.
+ * Return: void.
  *
  */
 void print_all(const char * const format, ...)
 {
 	va_list valist;
-	char *s, c;
-	int i, j, n = 0;
-	double d;
+
+	int j = 0, k;
+	const char *strings[4] = {"%c", "%d", "%f", "%s"};
+	const char otros[4] = {'c', 'i', 'f', 's'};
 
 	va_start(valist, format);
-	while (format[n] != '\0')
-		n++;
-	for (j = 0; j < n; j++)
+	while (format[j] != '\0')
 	{
-		if (format[j] == 'c')
-		{
-			c = va_arg(valist, int);
-			printf("%c", c);
-		}
-		else if (format[j] == 'i')
-		{
-			i = va_arg(valist, int);
-			printf("%d", i);
-		}
-		else if (format[j] == 'f')
-		{
-			d = va_arg(valist, double);
-			printf("%f", d);
-		}
-		else if (format[j] == 's')
-		{
-			s = va_arg(valist, char*);
-			printf("%s", s);
-		}
-		else
-			continue;
-
-		if (j == n - 1)
-			printf("\n");
-		else
+		if (j != 0)
 			printf(", ");
-
+		k = 0;
+		while (k < 4)
+		{
+			if (format[j] == otros[k])
+			{
+				printf(strings[k], va_arg(valist, int));
+			}
+			k++;
+		}
+		j++;
 	}
+	printf("\n");
 	va_end(valist);
 }
