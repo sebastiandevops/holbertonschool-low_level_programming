@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-int _strlen(char *s);
 /**
  * add_node_end - function that adds a new node at the end of a linked list.
  * @head: list header.
