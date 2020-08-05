@@ -46,7 +46,8 @@ int read_textfile2(const char *filename, const char *copyname, size_t letters)
 	if (ret == -1)
 		return (0);
 	close(fd);
-	cd = open(copyname, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
+	cd = open(copyname, O_CREAT | O_RDWR | O_TRUNC,
+			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (cd == -1)
 	{
 		return (-1);
