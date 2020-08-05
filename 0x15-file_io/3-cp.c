@@ -16,6 +16,8 @@ int main(int ac, char **av)
 		exit(1);
 	}
 	n = read_textfile2(av[1], av[2], 1024);
+	printf("-> %i)\n", n);
+
 	return (0);
 }
 
