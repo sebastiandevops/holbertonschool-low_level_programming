@@ -1,6 +1,6 @@
 #include "holberton.h"
 
- /**
+/**
  * main - program that copies the content of a file to another file.
  * @ac: argument counter.
  * @av: argument vector.
