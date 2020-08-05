@@ -40,21 +40,29 @@ int read_textfile2(const char *filename, const char *copyname, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
-		return (0);
+		dprintf(2, "Error: Can't read from file %s", filename);
+		exit(98);
 	}
 	ret = read(fd, buf, letters);
 	if (ret == -1)
-		return (0);
+	{
+		dprintf(2, "Error: Can't read from file %s", filename);
+		exit(98);
+	}
 	close(fd);
 	cd = open(copyname, O_CREAT | O_RDWR | O_TRUNC,
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (cd == -1)
 	{
-		return (-1);
+		dprintf(2, "Error: Can't write to %s", copyname);
+		exit(99);
 	}
 	wt = write(cd, buf, ret);
 	if (wt == -1)
-		return (-1);
+	{
+		dprintf(2, "Error: Can't write to %s", copyname);
+		exit(99);
+	}
 	close(cd);
 	return (1);
 }
