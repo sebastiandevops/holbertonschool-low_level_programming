@@ -31,39 +31,40 @@ int main(int ac, char **av)
  */
 int read_textfile2(const char *filename, const char *copyname, size_t letters)
 {
-	int fd;
-	int ret;
+	int fd, ret, cd, wt, cl;
 	char *buf = malloc(letters + 1);
-	int cd;
-	int wt;
 
 	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s", filename);
-		exit(98);
-	}
 	ret = read(fd, buf, letters);
-	if (ret == -1)
+	if (ret == -1 || fd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s", filename);
+		dprintf(2, "Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
-	close(fd);
+	cl = close(fd);
+	if (cl == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 	cd = open(copyname, O_CREAT | O_RDWR | O_TRUNC,
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (cd == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", copyname);
+		dprintf(2, "Error: Can't write to %s\n", copyname);
 		exit(99);
 	}
 	wt = write(cd, buf, ret);
 	if (wt == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", copyname);
+		dprintf(2, "Error: Can't write to %s\n", copyname);
 		exit(99);
 	}
-	close(cd);
+	cl = close(cd);
+	if (cl == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", cd);
+		exit(100);
+	}
 	return (1);
 }
-
