@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	n = read_textfile2(av[1], av[2], 1024);
-	return (0);
+	return (n);
 }
 
 /**
