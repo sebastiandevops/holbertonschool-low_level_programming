@@ -21,20 +21,3 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	*head = new_node;
 	return (new_node);
 }
-
-/**
- * _strlen - function that returns the length of a string.
- * @s: string to check.
- *
- * Return: length.
- *
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; ++i)
-	{
-	}
-	return (i);
-}
