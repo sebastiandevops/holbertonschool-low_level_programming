@@ -33,4 +33,23 @@ Make no mistake -- C can be a difficult language to start learning to program wi
     Static Libraries
 
 
+## Low-Level Basics
+
+During the first trimester, you will learn general programming concepts that apply to all languages, such as loops, if/else statements, data structures, and more. You will learn how Unix systems work and gain an understanding of "what is going on under the hood" of these universally utilized systems.
+
+You will also have two major partner projects:
+
+    `printf`: recreating your own implementation of C's `printf` function
+    Shell: creating your own shell that takes commands and executes them
+
+You can find more information about the Shell project here.
+
+Before you start your partner projects, make sure you understand how collaborating on Github works! Github errors are the cause of many struggles when it comes to partner projects.
+
+In the second and third trimesters, you will be introduced to more advanced data structures and to well-known algorithms used in programming. On top of being essential towards software engineering, both advanced data structures and algorithms are often the subject of technical interviews, so it's important you have a solid understanding of them.
+
+## Betty
+
+At Holberton, we have a coding style called `Betty` and your C code must adhere to Betty's standards. You should be using Betty to check your code before you push it to Github, ensuring you have clean, readable code.
+
 Kris Bredemeier
