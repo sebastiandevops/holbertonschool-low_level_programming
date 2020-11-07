@@ -11,5 +11,3 @@ int main(void)
 	return (EXIT_SUCCESS);
 }
 /* Holberton */
-/* Holberton */
-/* Holberton */
