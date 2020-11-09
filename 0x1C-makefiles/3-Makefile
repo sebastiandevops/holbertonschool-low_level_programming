@@ -1,10 +1,10 @@
 CC=gcc
 SRC = main.c holberton.c
-OBJ = main.o holberton.o
+OBJ = $(patsubst %.c,%.o,$(SRC))
 NAME = holberton
 RM = /bin/rm -f
 all: $(OBJ)
-	$(CC) $(SRC) -o holberton
+	$(CC) $(OBJ) -o $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean:
