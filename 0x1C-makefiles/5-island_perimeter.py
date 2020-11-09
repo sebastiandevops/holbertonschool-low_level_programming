@@ -15,11 +15,28 @@ def island_perimeter(grid):
             Grid cells are connected horizontally/vertically (not diagonally).
             Grid is rectangular, width and height don’t exceed 100
     """
-    result = 2
-    unzip_lst = zip(*grid)
-    print(unzip_lst, 'unzip_lst')
-    for i in unzip_lst:
-        for j in i:
-            if j == 1:
-                result += 2
-    return result
+    d = 0
+    perimeter = 0
+    height = len(grid)
+    length = len(grid[0])
+    for line in grid:
+        c = 0
+        for val in line:
+            if val == 1:
+                surround = 4
+                if c != length - 1:
+                    if grid[d][c + 1] == 1:
+                        surround -= 1
+                if c != 0:
+                    if grid[d][c - 1] == 1:
+                        surround -= 1
+                if d != height - 1:
+                    if grid[d + 1][c] == 1:
+                        surround -= 1
+                if d != 0:
+                    if grid[d - 1][c] == 1:
+                        surround -= 1
+                perimeter += surround
+            c += 1
+        d += 1
+    return perimeter
