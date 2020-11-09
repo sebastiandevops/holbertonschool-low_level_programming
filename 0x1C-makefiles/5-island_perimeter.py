@@ -17,6 +17,7 @@ def island_perimeter(grid):
     """
     result = 2
     unzip_lst = zip(*grid)
+    print(unzip_lst, 'unzip_lst')
     for i in unzip_lst:
         for j in i:
             if j == 1:
