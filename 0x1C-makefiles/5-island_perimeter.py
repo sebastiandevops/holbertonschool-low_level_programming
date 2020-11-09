@@ -16,8 +16,9 @@ def island_perimeter(grid):
             Grid is rectangular, width and height don’t exceed 100
     """
     result = 2
-    for row in range(len(grid)):
-        for i in range(len(grid[row])):
-            if i == 1:
+    unzip_lst = zip(*grid)
+    for i in unzip_lst:
+        for j in i:
+            if j == 1:
                 result += 2
     return result
