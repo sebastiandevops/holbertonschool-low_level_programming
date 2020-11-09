@@ -5,7 +5,7 @@ NAME = holberton
 RM = /bin/rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(OBJ)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean:
